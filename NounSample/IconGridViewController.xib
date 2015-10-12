@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="IconGridViewController" customModule="NounSample" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="z56-uN-CLS" id="Usu-gw-LJO"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="474" height="445"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView focusRingType="none" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JP-NP-HRd">
+                    <rect key="frame" x="0.0" y="0.0" width="474" height="445"/>
+                    <clipView key="contentView" id="GtR-nj-3c7">
+                        <rect key="frame" x="0.0" y="0.0" width="474" height="445"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView selectable="YES" id="z56-uN-CLS">
+                                <rect key="frame" x="0.0" y="0.0" width="474" height="445"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <animations/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="20" minimumLineSpacing="20" id="qcS-o3-eXO">
+                                    <size key="itemSize" width="40" height="40"/>
+                                    <edgeInsets key="sectionInset" left="20" right="20" top="20" bottom="20"/>
+                                </collectionViewFlowLayout>
+                                <color key="primaryBackgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="-2" id="8a3-uX-PDi"/>
+                                    <outlet property="delegate" destination="-2" id="h2c-pn-kJN"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                    </clipView>
+                    <animations/>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="UBb-Hb-gbs">
+                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Tad-yd-TeV">
+                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="5JP-NP-HRd" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Kzl-dO-TzN"/>
+                <constraint firstAttribute="bottom" secondItem="5JP-NP-HRd" secondAttribute="bottom" id="QBT-n3-N6f"/>
+                <constraint firstAttribute="trailing" secondItem="5JP-NP-HRd" secondAttribute="trailing" id="Tiw-wd-rW7"/>
+                <constraint firstItem="5JP-NP-HRd" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="v9h-pr-lK4"/>
+            </constraints>
+            <animations/>
+            <point key="canvasLocation" x="347" y="528.5"/>
+        </customView>
+    </objects>
+</document>

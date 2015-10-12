@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="138"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="6KS-PH-4yO" userLabel="Place Holder ImageView">
+                    <rect key="frame" x="0.0" y="0.0" width="160" height="138"/>
+                    <animations/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="placeholder" id="IHz-yz-TaM"/>
+                </imageView>
+                <imageView identifier="iconViewItem" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="gKb-3Y-8L4" userLabel="Icon Image View">
+                    <rect key="frame" x="0.0" y="0.0" width="160" height="138"/>
+                    <animations/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="nDM-Ni-se5"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="gKb-3Y-8L4" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="0oM-h7-mf8"/>
+                <constraint firstAttribute="trailing" secondItem="6KS-PH-4yO" secondAttribute="trailing" id="Ld2-J8-x0K"/>
+                <constraint firstItem="6KS-PH-4yO" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="SKI-mp-lWV"/>
+                <constraint firstAttribute="trailing" secondItem="gKb-3Y-8L4" secondAttribute="trailing" id="Zc2-SP-rXW"/>
+                <constraint firstAttribute="bottom" secondItem="gKb-3Y-8L4" secondAttribute="bottom" id="fAn-7i-aBZ"/>
+                <constraint firstItem="gKb-3Y-8L4" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="kId-jT-dsx"/>
+                <constraint firstItem="6KS-PH-4yO" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="mhl-aj-hMI"/>
+                <constraint firstAttribute="bottom" secondItem="6KS-PH-4yO" secondAttribute="bottom" id="xpM-FX-9RV"/>
+            </constraints>
+            <animations/>
+            <point key="canvasLocation" x="261" y="836"/>
+        </customView>
+        <collectionViewItem id="kfj-VS-9Gs" customClass="IconViewItem" customModule="NounSample" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="gKb-3Y-8L4" id="MWO-i3-59P"/>
+                <outlet property="placeHolderImageView" destination="6KS-PH-4yO" id="buY-op-g61"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="plt-iV-a0J"/>
+            </connections>
+        </collectionViewItem>
+    </objects>
+    <resources>
+        <image name="placeholder" width="92" height="92"/>
+    </resources>
+</document>
